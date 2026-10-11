@@ -40,10 +40,12 @@ export const GROUPS=[
   ["karamazov","The Brothers Karamazov","Fyodor Dostoevsky"],
   ["crime","Crime and Punishment","Fyodor Dostoevsky"],
   ["underground","Notes from Underground","Fyodor Dostoevsky"],
-  ["fear","Fear and Trembling","Søren Kierkegaard"]]}
+  ["fear","Fear and Trembling","Søren Kierkegaard"],
+  ["redrising","Red Rising","Pierce Brown",{link:["Rovingheights Books","https://rhbooks.com.ng/product/red-rising/"]}]]}
 ];
-export const SHOP={perfume:["@elixirs_ng on Instagram","https://instagram.com/elixirs_ng"]};
+export const SHOP={perfume:["@elixirs_ng on Instagram","https://instagram.com/elixirs_ng"],books:["Rovingheights Books","https://rhbooks.com.ng/"]};
 export const PHOTOS={
+"redrising": ["/img/redrising-0.jpg"],
 "cash": [
 "/img/cash-0.gif"
 ],
