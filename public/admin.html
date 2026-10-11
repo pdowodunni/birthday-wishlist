@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Wishlist Admin</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+<style>
+.admin-tools{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pinform{display:flex;flex-direction:column;gap:10px;max-width:320px}
+.ledger td .clear{font:600 12px var(--body);background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:6px 8px;cursor:pointer}
+.ledger td .clear.confirm{border-color:var(--gold);color:var(--gold)}
+.summary{display:flex;gap:24px;flex-wrap:wrap;font-variant-numeric:tabular-nums}
+.summary div{display:flex;flex-direction:column}
+.summary strong{font:700 28px/1 var(--display)}
+.summary span{color:var(--muted);font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">Only for Daniel</div>
+    <h1>Who's getting what</h1>
+  </header>
+
+  <form id="pinForm" class="pinform" hidden>
+    <label for="pin">Admin PIN</label>
+    <input type="text" id="pin" inputmode="numeric" autocomplete="off" placeholder="Enter your PIN">
+    <p id="pinErr" class="err" hidden></p>
+    <button class="btn" type="submit">Open</button>
+  </form>
+
+  <div id="view" hidden>
+    <div class="summary" id="summary"></div>
+    <section class="ledger" id="ledger"></section>
+    <section class="ledger" id="openList"></section>
+    <div class="admin-tools">
+      <a class="btn ghost" href="/" style="flex:none">Open the wishlist</a>
+      <button class="btn ghost" id="lock" style="flex:none">Lock</button>
+    </div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="/admin.js"></script>
+</body>
+</html>

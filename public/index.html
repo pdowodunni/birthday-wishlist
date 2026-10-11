@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Daniel's Birthday Wishlist</title>
+<meta name="description" content="Pick a gift for Daniel's birthday on 26 October. Book it so nobody else buys the same thing.">
+<meta property="og:title" content="Daniel's Birthday Wishlist">
+<meta property="og:description" content="Pick a gift and book it so nobody else buys the same thing.">
+<meta property="og:image" content="/img/cash-0.gif">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="date">26 October</div>
+    <h1>Daniel's Birthday Wishlist</h1>
+    <p class="lede">Thank you for thinking of me. Tap "I'll get this" on any gift. Add your name or stay anonymous. Once it's taken, everyone sees it, so pick something else if your first choice is gone.</p>
+  </header>
+
+  <ol class="how">
+    <li><b>Choose a gift</b>Scroll the list and pick anything that fits your budget.</li>
+    <li><b>Tap "I'll get this"</b>Add your name or stay anonymous. It locks so nobody else buys the same thing.</li>
+    <li><b>Buy it</b>If a gift says "Taken", pick another one. Cash can be sent anytime.</li>
+  </ol>
+
+  <div class="stat" aria-live="polite"><strong id="openCount">0</strong><span id="openLabel">gifts still open</span></div>
+  <div id="notice" class="notice" hidden></div>
+
+  <div class="filters" role="group" aria-label="Show">
+    <button class="chip" id="f-all" aria-pressed="true">Everything</button>
+    <button class="chip" id="f-open" aria-pressed="false">Still open</button>
+    <button class="chip" id="f-booked" aria-pressed="false">Taken</button>
+  </div>
+
+  <div id="sections"></div>
+
+  <footer>Picked something by mistake? Open the gift and tap "Cancel my booking".</footer>
+</div>
+
+<div id="scrim" class="scrim" hidden></div>
+<div id="toast" class="toast" role="status" hidden></div>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
